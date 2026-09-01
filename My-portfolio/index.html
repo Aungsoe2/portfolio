@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <button id="menu-btn">☰</button>
+        <nav>
+
+            <h2>My Portfolio</h2>
+            <div>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="YOUR-GITHUB-LINK" target="_blank">
+                    GitHub
+                </a>
+            </div>
+            <button id="theme-btn">🌙</button>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Hi, I'm a web developer</h1>
+            <p>I build responsive and user-friendly websites.</p>
+            <a href="#projects">View My Work</a>
+        </section>
+
+        <section class="animate">
+            <h2>About Me</h2>
+            <p>
+                I am a begining web developer learning HTML, CSS and JavaScript. I am interested un creating responsive
+                and user-friendly websites. I am passionate about coding and continuously improving my skills.
+            </p>
+
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Responsive Design</li>
+            </ul>
+        </section>
+        <section id="projects">
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="javascript">JavaScript</button>
+            </div>
+
+            <h2>My Projects</h2>
+
+            <div class="project-card" data-category="javascript">
+                <h3>To-Do List</h3>
+
+                <p>
+                    A responsive To-Do List app built with HTML, CSS, and JavaScript.
+                    Tasks are saved in the browser using localStorage.
+                </p>
+
+                <p>
+                    <strong>Technologies:</strong>
+                    HTML, CSS, JavaScript
+                </p>
+
+                <a href="Todo-list/index.html" target="_blank">
+                    Live Demo
+                </a>
+            </div>
+            <div class="project-card" data-category="javascript">
+                <h3>JavaScript Calculator</h3>
+
+                <p>
+                    A responsive calculator built with HTML, CSS, and JavaScript.
+                    It supports basic arithmetic operations and keyboard input.
+                </p>
+
+                <p>
+                    <strong>Technologies:</strong>
+                    HTML, CSS, JavaScript
+                </p>
+
+                <a href="calculator/index.html" target="_blank">
+                    Live Demo
+                </a>
+            </div>
+            <div class="project-card" data-category="javascript">
+                <h3>Weather App</h3>
+
+                <p>
+                    A weather application that uses a real weather API
+                    to display current weather information for searched cities.
+                </p>
+
+                <p>
+                    <strong>Technologies:</strong>
+                    HTML, CSS, JavaScript, API
+                </p>
+
+                <a href="weather-app/index.html" target="_blank">
+                    Live Demo
+                </a>
+            </div>
+
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: example@email.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </section>
+    </main>
+
+
+    <nav id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <form id="contact-form">
+        <input type="text" id="name" placeholder="Your name">
+        <input type="email" id="email" placeholder="Your email">
+        <textarea id="message" placeholder="Your message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <footer>
+        © <span id="year"></span> My Portfolio
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
