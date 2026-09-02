@@ -278,3 +278,18 @@ footer {
     background: #333;
     color: white;
 }
+#about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    margin-bottom: 20px;
+}
+
+#about p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
