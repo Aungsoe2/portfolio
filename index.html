@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Aung Soe | Web Developer</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -51,18 +51,16 @@
                 I am developing my skills in front-end web development
                 and building responsive, user-friendly websites.
             </p>
-
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Responsive Design</li>
-                <li>API Integration</li>
-                <li>Git & GitHub</li>
-            </ul>
+            <div class="skills-container">
+                <div class="skill-card">HTML</div>
+                <div class="skill-card">CSS</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">Responsive Design</div>
+                <div class="skill-card">API Integration</div>
+                <div class="skill-card">Git & GitHub</div>
+            </div>
         </section>
         <section id="projects">
-
             <div class="project-filters">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="web">Web</button>
@@ -73,6 +71,7 @@
 
             <div class="project-card" data-category="javascript">
                 <h3>To-Do List</h3>
+                <img src="images/image1.jpg" alt="To-Do List App">
 
                 <p>
                     A responsive To-Do List app built with HTML, CSS, and JavaScript.
@@ -93,7 +92,7 @@
             </div>
             <div class="project-card" data-category="javascript">
                 <h3>JavaScript Calculator</h3>
-
+                <img src="images/image2.jpg" alt="JavaScript Calculator">
                 <p>
                     A responsive calculator built with HTML, CSS, and JavaScript.
                     It supports basic arithmetic operations and keyboard input.
@@ -111,7 +110,7 @@
             </div>
             <div class="project-card" data-category="javascript">
                 <h3>Weather App</h3>
-
+                <img src="images/image3.jpg" alt="Weather App">
                 <p>
                     A weather application that uses a real weather API
                     to display current weather information for searched cities.
@@ -128,7 +127,6 @@
                 <a href="https://github.com/Aungsoe2/weather-app" target="_blank">GitHub
                 </a>
             </div>
-
         </section>
         <section id="contact">
             <h2>Contact Me</h2>
@@ -137,14 +135,15 @@
                 Interested in working together or have a project in mind?
                 Feel free to get in touch.
             </p>
+            <a href="mailto:soea56862@gmail.com">
+                Email Me
+            </a>
 
             <a href="https://github.com/Aungsoe2" target="_blank">
                 Visit My GitHub
             </a>
         </section>
     </main>
-
-
     <nav id="nav-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -156,7 +155,7 @@
         <input type="text" id="name" placeholder="Your name">
         <input type="email" id="email" placeholder="Your email">
         <textarea id="message" placeholder="Your message"></textarea>
-        <button type="submit">Send Message</button>
+        <button type="submit">Send</button>
     </form>
 
     <footer>
