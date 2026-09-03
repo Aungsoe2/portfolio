@@ -132,6 +132,9 @@ if (contactForm) {
             alert("Please fill in all fields.");
             return;
         }
+        const submitButton = document.querySelector("#contact-form button");
+             submitButton.textContent = "Sending...";
+             submitButton.disabled = true;
 fetch("https://portfolio-backend-5k0t.onrender.com/contact", {
     method: "POST",
     headers: {
@@ -149,11 +152,14 @@ fetch("https://portfolio-backend-5k0t.onrender.com/contact", {
 .then(function (data) {
     alert(data.message);
     contactForm.reset();
+    submitButton.textContent = "Send";
+    submitButton.disabled = false;
 })
 .catch(function (error) {
     console.error(error);
     alert("Something went wrong. Please try again.");
+    submitButton.textContent = "Send";
+    submitButton.disabled = false;
 });
-        
     });
 }
