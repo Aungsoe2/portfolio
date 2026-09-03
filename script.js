@@ -132,9 +132,28 @@ if (contactForm) {
             alert("Please fill in all fields.");
             return;
         }
-
-        alert("Thanks, " + name + "! Your message has been received.");
-
-        contactForm.reset();
+fetch("http://localhost:3000/contact", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        name: name,
+        email: email,
+        message: message
+    })
+})
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+    alert(data.message);
+    contactForm.reset();
+})
+.catch(function (error) {
+    console.error(error);
+    alert("Something went wrong. Please try again.");
+});
+        
     });
 }
