@@ -132,7 +132,7 @@ if (contactForm) {
             alert("Please fill in all fields.");
             return;
         }
-fetch("http://localhost:3000/contact", {
+fetch("https://portfolio-backend-5k0t.onrender.com/contact", {
     method: "POST",
     headers: {
         "Content-Type": "application/json"
