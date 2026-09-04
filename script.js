@@ -103,7 +103,6 @@ filterButtons.forEach(function (button) {
 // ===============================
 
 const year = document.querySelector("#year");
-
 if (year) {
     year.textContent = new Date().getFullYear();
 }
@@ -131,35 +130,44 @@ if (contactForm) {
         if (!name || !email || !message) {
             alert("Please fill in all fields.");
             return;
-        }
+            }
+
+        if (!email.includes("@") || !email.includes(".")) {
+            alert("Please enter a valid email address.");
+            return;
+            }
+            if (message.length < 10) {
+               alert("Please enter at least 10 characters in your message.");
+               return;
+            }
         const submitButton = document.querySelector("#contact-form button");
              submitButton.textContent = "Sending...";
              submitButton.disabled = true;
-fetch("https://portfolio-backend-5k0t.onrender.com/contact", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-        name: name,
-        email: email,
-        message: message
+        fetch("https://portfolio-backend-5k0t.onrender.com/contact", {
+             method: "POST",
+             headers: {
+            "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+            name: name,
+            email: email,
+            message: message
+        })
     })
-})
-.then(function (response) {
-    return response.json();
-})
-.then(function (data) {
-    alert(data.message);
-    contactForm.reset();
-    submitButton.textContent = "Send";
-    submitButton.disabled = false;
-})
-.catch(function (error) {
-    console.error(error);
-    alert("Something went wrong. Please try again.");
-    submitButton.textContent = "Send";
-    submitButton.disabled = false;
-});
+        .then(function (response) {
+            return response.json();
+            })
+        .then(function (data) {
+           alert(data.message);
+           contactForm.reset();
+           submitButton.textContent = "Send";
+           submitButton.disabled = false;
+           })
+        .catch(function (error) {
+           console.error(error);
+           alert("Something went wrong. Please try again.");
+           submitButton.textContent = "Send";
+           submitButton.disabled = false;
+        });
     });
 }
