@@ -160,6 +160,9 @@ if (contactForm) {
             })
         .then(function (data) {
            formMessage.textContent = data.message;
+           setTimeout(function () {
+           formMessage.textContent = "";
+           }, 5000);
            contactForm.reset();
            submitButton.textContent = "Send";
            submitButton.disabled = false;
