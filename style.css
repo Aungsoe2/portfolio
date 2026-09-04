@@ -418,3 +418,11 @@ footer {
     border-top: 1px solid #ddd;
     color: #666;
 }
+#form-message {
+    margin-top: 15px;
+    margin-left: 150px;
+    color: rgb(135, 247, 135);
+    padding: 10px;
+    font-weight: bold;
+    font-size: 10px;
+}

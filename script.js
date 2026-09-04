@@ -113,6 +113,7 @@ if (year) {
 // ===============================
 
 const contactForm = document.querySelector("#contact-form");
+const formMessage = document.querySelector("#form-message");
 
 if (contactForm) {
     contactForm.addEventListener("submit", function (event) {
@@ -158,7 +159,7 @@ if (contactForm) {
             return response.json();
             })
         .then(function (data) {
-           alert(data.message);
+           formMessage.textContent = data.message;
            contactForm.reset();
            submitButton.textContent = "Send";
            submitButton.disabled = false;
