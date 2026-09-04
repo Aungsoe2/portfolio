@@ -426,3 +426,11 @@ footer {
     font-weight: bold;
     font-size: 10px;
 }
+.project-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
