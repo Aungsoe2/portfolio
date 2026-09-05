@@ -137,8 +137,8 @@ if (contactForm) {
             alert("Please enter a valid email address.");
             return;
             }
-            if (message.length < 10) {
-               alert("Please enter at least 10 characters in your message.");
+            if (message.length < 100) {
+               alert("Please enter at least 100 characters in your message.");
                return;
             }
         const submitButton = document.querySelector("#contact-form button");
